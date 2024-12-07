@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .head-container,
+    .Experience,
+    .lists {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 0.5px solid rgb(113, 113, 112);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-inline: 20px;
+      padding-block: 20px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-inline: 20px;
+      padding-block: 20px;
+    }
+
+    .lists div div {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lists div li {
+      margin-inline-end: 30px;
+      list-style: none;
+      padding-bottom: 6px;
+      padding-inline: 14px;
+      border-bottom: 0.4px solid #888;
+    }
+
+    .invisible {
+      display: none;
+    }
+    .main {
+      margin-top: 20px;
+    }
+
+    .certifications,
+    .Education {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px solid rgb(113, 113, 112);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-inline: 20px;
+      padding-block: 20px;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .certificate-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10%;
+    }
+
+    .certificate-flex div {
+      width: 40%;
+      padding-block: 10px;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="head-container">
+        <div class="head">
+          <h1 class="name">USER NAME</h1>
+          <p class="destination">Mention your role</p>
+        </div>
+        <div class="user-details">
+          <p class="email">user@gmail.com</p>
+          <p class="phone">+91 9123456712</p>
+        </div>
+      </div>
+      <div class="Experience">
+        <div class="Experience-1">
+          <h2>Experience</h2>
+          <h3>Title</h3>
+          <p>
+            <b>Experience: </b>Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Maxime amet accusantium corporis veritatis tenetur
+            incidunt beatae praesentium minus corrupti exercitationem cum
+            voluptatum minima facilis, quae iure possimus. Molestiae autem animi
+            omnis hic voluptatum culpa asperiores consequuntur dolore repellat,
+            reiciendis magni odit? Eius accusamus error suscipit eveniet
+            repudiandae accusantium ipsum molestiae.
+          </p>
+        </div>
+      </div>
+      <div class="Education">
+        <div class="Education-1">
+          <h2>Education</h2>
+          <h3>Institute Name</h3>
+          <p><b>CPGA</b> : Value/10</p>
+          <p>
+            Skills: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Maxime amet accusantium corporis veritatis tenetur incidunt beatae
+            praesentium minus corrupti exercitationem cum voluptatum minima
+            facilis, quae iure possimus. Molestiae autem animi omnis hic
+            voluptatum culpa asperiores consequuntur dolore repellat, reiciendis
+            magni odit? Eius accusamus error suscipit eveniet repudiandae
+            accusantium ipsum molestiae.
+          </p>
+        </div>
+        <div class="Education-2">
+          <h3>Institute Name</h3>
+          <p><b>CPGA</b> : Value/10</p>
+          <p>
+            Skills: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Maxime amet accusantium corporis veritatis tenetur incidunt beatae
+            praesentium minus corrupti exercitationem cum voluptatum minima
+            facilis, quae iure possimus. Molestiae autem animi omnis hic
+            voluptatum culpa asperiores consequuntur dolore repellat, reiciendis
+            magni odit? Eius accusamus error suscipit eveniet repudiandae
+            accusantium ipsum molestiae.
+          </p>
+        </div>
+      </div>
+      <div class="lists">
+        <div class="list-1">
+          <h2>Lists</h2>
+          <div class="list-1">
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+            <li>Skill 4</li>
+          </div>
+        </div>
+      </div>
+
+      <div class="certifications">
+        <h2>Certifications</h2>
+        <div class="certificate-flex">
+          <div class="certificate-1">
+            <h3>Certificate Title 1</h3>
+            <p>Certificated Organization</p>
+          </div>
+          <div class="certificate-2">
+            <h3>Certificate Title 1</h3>
+            <p>Certificated Organization</p>
+          </div>
+          <div class="certificate-3">
+            <h3>Certificate Title 1</h3>
+            <p>Certificated Organization</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn">
+        <button onclick="print()">Download</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector('.btn');
+
+    const print = () => {
+      btn.classList.add('invisible');
+      window.print();
+
+      setInterval(() => {
+        btn.classList.remove('invisible');
+      }, 1000);
+    };
+  </script>
+</html>
