@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'EB Garamond', serif;
+}
+
+.dash-nav {
+  cursor: pointer;
+}
+
+.nav-lists li {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-lists li:hover::before {
+  position: absolute;
+  content: '';
+  margin-top: 25px;
+  width: 100%;
+  border-bottom: 1px solid blue;
+  animation: animate-nav 0.3s ease-in-out;
+}
+
+@keyframes animate-nav {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
