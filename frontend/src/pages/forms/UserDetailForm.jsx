@@ -41,7 +41,7 @@ const UserDetailForm = () => {
           </div>
 
           <div className="btns flex justify-between gap-4">
-            <button className="w-full bg-gradient-to-r from-blue-400 to-purple-400 text-white font-medium py-2 rounded-lg hover:from-blue-300 hover:to-purple-300 focus:outline-none focus:ring-4 focus:ring-blue-200">
+            <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 shadow-md text-white font-medium py-2 rounded-lg hover:from-blue-300 hover:to-purple-300 focus:outline-none focus:ring-4 focus:ring-blue-200">
               Modify
             </button>
             <button

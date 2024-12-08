@@ -1,14 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: 'EB Garamond', serif;
+  /* font-family: 'Playfair Display', serif; */
+  /* font-family: 'Space Grotesk', sans-serif;*/
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'EB Garamond', serif; */
+  /* font-family: "Montserrat", serif; */
+  /* font-family: 'Poppins', sans-serif; */
+
   /* font-family: "Roboto", sans-serif; */
   /* font-family: 'Libre Franklin', serif; */
 }
 
+h1 {
+  /* font-family: 'EB Garamond', serif; */
+}
+
+.home-container, .logo {
+  /* font-family: 'Poppins', sans-serif; */
+}
+
 .dash-nav {
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
 
@@ -22,8 +39,9 @@
   content: '';
   margin-top: 25px;
   width: 100%;
-  border-bottom: 1px solid blue;
-  animation: animate-nav 0.3s ease-in-out;
+  border-bottom: 3px solid rgb(87, 87, 255);
+  animation: animate-nav 0.4s ease-in-out;
+  border-radius: 21px;
 }
 
 @keyframes animate-nav {
@@ -32,5 +50,18 @@
   }
   to {
     width: 100%;
+  }
+}
+
+.animate-right {
+  animation: animate-top-bot 0.6s ease-in-out infinite;
+}
+
+@keyframes animate-top-bot {
+  from {
+    transform: translateY(1%);
+  }
+  to {
+    transform: translateY(2%);
   }
 }

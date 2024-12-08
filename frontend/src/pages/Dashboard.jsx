@@ -4,7 +4,22 @@ import UserDetailForm from './forms/UserDetailForm';
 import { useVisible } from '../context/visibleContext';
 
 const Dashboard = () => {
-  const { visiblity, setVisiblity } = useVisible();
+  const {
+    visiblity,
+    setVisiblity,
+    exVisiblity,
+    setExVisiblity,
+    edVisiblity,
+    setEdVisiblity,
+    skVisiblity,
+    setSkVisiblity,
+    ceVisiblity,
+    setCeVisiblity,
+    prVisiblity,
+    setPrVisiblity,
+    awVisiblity,
+    setAwVisiblity,
+  } = useVisible();
 
   const user = {
     name: 'Naveen',
@@ -85,7 +100,17 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800 font-sans relative">
       <div
-        className={visiblity ? 'blur-sm container-dashboard flex m-4 gap-6' : 'container-dashboard flex m-4 gap-6'}
+        className={
+          visiblity ||
+          edVisiblity ||
+          exVisiblity ||
+          awVisiblity ||
+          skVisiblity ||
+          prVisiblity ||
+          ceVisiblity
+            ? 'blur-sm container-dashboard flex m-4 gap-6'
+            : 'container-dashboard flex m-4 gap-6'
+        }
       >
         <div className="navigation py-6 px-6 rounded-lg flex flex-col gap-6 items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
           <div className="profile flex flex-col items-center">
@@ -164,7 +189,12 @@ const Dashboard = () => {
                     </p>
                   </div>
                   <div className="text-blue-600 hover:text-blue-800 cursor-pointer">
-                    <span className="material-symbols-outlined">edit</span>
+                    <span
+                      onClick={() => setExVisiblity(true)}
+                      className="material-symbols-outlined"
+                    >
+                      edit
+                    </span>
                   </div>
                 </div>
               ))}
@@ -194,7 +224,12 @@ const Dashboard = () => {
                   </p>
                 </div>
                 <div className="edit-option text-blue-600 hover:text-blue-800 cursor-pointer">
-                  <span className="material-symbols-outlined">edit</span>
+                  <span
+                    onClick={() => setEdVisiblity(true)}
+                    className="material-symbols-outlined"
+                  >
+                    edit
+                  </span>
                 </div>
               </div>
             ))}
@@ -216,7 +251,12 @@ const Dashboard = () => {
                 ))}
               </div>
               <div className="edit-option text-blue-600 hover:text-blue-800 cursor-pointer">
-                <span className="material-symbols-outlined">edit</span>
+                <span
+                  onClick={() => setSkVisiblity(true)}
+                  className="material-symbols-outlined"
+                >
+                  edit
+                </span>
               </div>
             </div>
           </div>
@@ -240,7 +280,12 @@ const Dashboard = () => {
                   </p>
                 </div>
                 <div className="edit-option text-blue-600 hover:text-blue-800 cursor-pointer">
-                  <span className="material-symbols-outlined">edit</span>
+                  <span
+                    onClick={() => setCeVisiblity(true)}
+                    className="material-symbols-outlined"
+                  >
+                    edit
+                  </span>
                 </div>
               </div>
             ))}
@@ -270,7 +315,12 @@ const Dashboard = () => {
                   </p>
                 </div>
                 <div className="edit-option text-blue-600 hover:text-blue-800 cursor-pointer">
-                  <span className="material-symbols-outlined">edit</span>
+                  <span
+                    onClick={() => setPrVisiblity(true)}
+                    className="material-symbols-outlined"
+                  >
+                    edit
+                  </span>
                 </div>
               </div>
             ))}
@@ -295,7 +345,12 @@ const Dashboard = () => {
                   </p>
                 </div>
                 <div className="edit-option text-blue-600 hover:text-blue-800 cursor-pointer">
-                  <span className="material-symbols-outlined">edit</span>
+                  <span
+                    onClick={() => setAwVisiblity(true)}
+                    className="material-symbols-outlined"
+                  >
+                    edit
+                  </span>
                 </div>
               </div>
             ))}
