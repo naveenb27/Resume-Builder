@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import profile from '../assets/profile.webp';
+import UserDetailForm from './forms/UserDetailForm';
+import { useVisible } from '../context/visibleContext';
 
 const Dashboard = () => {
+  const { visiblity, setVisiblity } = useVisible();
+
   const user = {
     name: 'Naveen',
     destination: 'Software Engineer',
@@ -79,8 +83,10 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 font-sans">
-      <div className="container-dashboard flex m-4 gap-6">
+    <div className="min-h-screen bg-gray-100 text-gray-800 font-sans relative">
+      <div
+        className={visiblity ? 'blur-sm container-dashboard flex m-4 gap-6' : 'container-dashboard flex m-4 gap-6'}
+      >
         <div className="navigation py-6 px-6 rounded-lg flex flex-col gap-6 items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
           <div className="profile flex flex-col items-center">
             <img
@@ -124,7 +130,12 @@ const Dashboard = () => {
                   <p className="text-gray-600">{user.destination}</p>
                 </div>
                 <div className="text-blue-600 hover:text-blue-800 cursor-pointer">
-                  <span className="material-symbols-outlined">edit</span>
+                  <span
+                    onClick={() => setVisiblity(true)}
+                    className="material-symbols-outlined"
+                  >
+                    edit
+                  </span>
                 </div>
               </div>
             </div>
@@ -290,6 +301,10 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-70%]">
+        <UserDetailForm />
       </div>
     </div>
   );
