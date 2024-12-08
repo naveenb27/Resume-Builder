@@ -1,4 +1,6 @@
+import Feature from '../components/HomeComponents/Feature';
 import HomeHeader from '../components/HomeComponents/Header';
+import Templates from '../components/HomeComponents/Templates';
 import Testimonal from '../components/HomeComponents/Testimonal';
 
 const Home = () => {
@@ -6,6 +8,8 @@ const Home = () => {
     <>
       <HomeHeader />
       <Testimonal />
+      <Templates />
+      <Feature />
     </>
   );
 };
